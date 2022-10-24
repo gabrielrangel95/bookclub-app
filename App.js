@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
 import {
   SafeAreaView,
   ScrollView,
@@ -8,20 +8,10 @@ import {
   Text,
   useColorScheme,
   View,
-} from 'react-native';
-
-
+} from 'react-native'
 
 const App = () => {
- 
-  return (
-    <NavigationContainer>
-     
-     
-    </NavigationContainer>
-  );
-};
+  return <NavigationContainer />
+}
 
-
-
-export default App;
+export default App

@@ -12,8 +12,15 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		34E66C26A2FA44D09B647C89 /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F3C68C0E51844D389285FF3 /* Inter-Regular.otf */; };
+		3C4115558BE34FF3AFF86C60 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 129EF19CA98449C49A9A9354 /* Lato-Black.ttf */; };
+		443451323AD2444F96C411E7 /* Inter-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D08829AAF4A6476EA3DF9D82 /* Inter-SemiBold.otf */; };
+		5DF5C68F2BE048F6856FEF36 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A81BA3014CE4C0087021262 /* Lato-Heavy.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-BookClub-BookClubTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-BookClub-BookClubTests.a */; };
+		77D86633BE1945B19234E170 /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1087F82F6DD47B7B0951AF6 /* Inter-Bold.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		E13CD4E357064434A9289E3A /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A4AE483782E4148AD4B60A6 /* Inter-Medium.otf */; };
+		E9F96AC555904B8989CB24AB /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EBDEAF9BD87454DBD3AAA65 /* Lato-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +37,8 @@
 		00E356EE1AD99517003FC87E /* BookClubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookClubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* BookClubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookClubTests.m; sourceTree = "<group>"; };
+		0EBDEAF9BD87454DBD3AAA65 /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../src/assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		129EF19CA98449C49A9A9354 /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../src/assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* BookClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BookClub/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = BookClub/AppDelegate.mm; sourceTree = "<group>"; };
@@ -43,6 +52,11 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-BookClub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BookClub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BookClub/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-BookClub-BookClubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookClub-BookClubTests.release.xcconfig"; path = "Target Support Files/Pods-BookClub-BookClubTests/Pods-BookClub-BookClubTests.release.xcconfig"; sourceTree = "<group>"; };
+		8F3C68C0E51844D389285FF3 /* Inter-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Regular.otf"; path = "../src/assets/fonts/Inter-Regular.otf"; sourceTree = "<group>"; };
+		9A4AE483782E4148AD4B60A6 /* Inter-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Medium.otf"; path = "../src/assets/fonts/Inter-Medium.otf"; sourceTree = "<group>"; };
+		9A81BA3014CE4C0087021262 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Heavy.ttf"; path = "../src/assets/fonts/Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		B1087F82F6DD47B7B0951AF6 /* Inter-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Bold.otf"; path = "../src/assets/fonts/Inter-Bold.otf"; sourceTree = "<group>"; };
+		D08829AAF4A6476EA3DF9D82 /* Inter-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-SemiBold.otf"; path = "../src/assets/fonts/Inter-SemiBold.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -122,6 +136,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				EF2186DB5D1B4391A6A7727C /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -146,6 +161,21 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-BookClub-BookClubTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF2186DB5D1B4391A6A7727C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1087F82F6DD47B7B0951AF6 /* Inter-Bold.otf */,
+				9A4AE483782E4148AD4B60A6 /* Inter-Medium.otf */,
+				8F3C68C0E51844D389285FF3 /* Inter-Regular.otf */,
+				D08829AAF4A6476EA3DF9D82 /* Inter-SemiBold.otf */,
+				129EF19CA98449C49A9A9354 /* Lato-Black.ttf */,
+				0EBDEAF9BD87454DBD3AAA65 /* Lato-Bold.ttf */,
+				9A81BA3014CE4C0087021262 /* Lato-Heavy.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +274,13 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				77D86633BE1945B19234E170 /* Inter-Bold.otf in Resources */,
+				E13CD4E357064434A9289E3A /* Inter-Medium.otf in Resources */,
+				34E66C26A2FA44D09B647C89 /* Inter-Regular.otf in Resources */,
+				443451323AD2444F96C411E7 /* Inter-SemiBold.otf in Resources */,
+				3C4115558BE34FF3AFF86C60 /* Lato-Black.ttf in Resources */,
+				E9F96AC555904B8989CB24AB /* Lato-Bold.ttf in Resources */,
+				5DF5C68F2BE048F6856FEF36 /* Lato-Heavy.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
