@@ -1,17 +1,16 @@
-import React from 'react'
+import { ThemeProvider } from 'styled-components'
 import { NavigationContainer } from '@react-navigation/native'
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native'
+import { theme } from '~/styles'
+import { Text } from '~/components'
 
 const App = () => {
-  return <NavigationContainer />
+  return (
+    <ThemeProvider theme={theme}>
+      <NavigationContainer>
+        <Text.SectionTitle>Olá, BookClub!</Text.SectionTitle>
+      </NavigationContainer>
+    </ThemeProvider>
+  )
 }
 
 export default App
