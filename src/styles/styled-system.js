@@ -216,6 +216,7 @@ export const borderProps = ({
   bottomRightRadius,
   bottomLeftRadius,
   borderColor,
+  borderStyle,
 }) => `
   ${bw ? `border-width: ${px(bw)}px;` : ''}
   ${btw ? `border-top-width: ${px(btw)}px;` : ''}
@@ -236,6 +237,7 @@ export const borderProps = ({
       : ''
   }
   ${borderColor ? `border-color: ${getColor(borderColor)};` : ''}
+  ${borderStyle ? `border-style: ${borderStyle};` : ''}
 `
 
 export const borderPropsTypes = {
@@ -250,4 +252,5 @@ export const borderPropsTypes = {
   bottomRightRadius: PropTypes.number,
   bottomLeftRadius: PropTypes.number,
   borderColor: PropTypes.string,
+  borderStyle: PropTypes.string,
 }

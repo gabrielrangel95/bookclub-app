@@ -25,3 +25,12 @@ export const BoxScreenContainer = styled.SafeAreaView`
   ${paddingProps}
   ${borderProps}
 `
+
+export const BoxTouchableContainer = styled.TouchableOpacity`
+  ${flexProps}
+  ${sizeProps}
+  ${colorProps}
+  ${marginProps}
+  ${paddingProps}
+  ${borderProps}
+`

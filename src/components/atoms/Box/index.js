@@ -1,5 +1,9 @@
 import PropTypes from 'prop-types'
-import { BoxContainer, BoxScreenContainer } from './styles'
+import {
+  BoxContainer,
+  BoxScreenContainer,
+  BoxTouchableContainer,
+} from './styles'
 import {
   sizePropsTypes,
   colorPropsTypes,
@@ -17,6 +21,10 @@ Box.Screen = ({ children, ...props }) => {
   return <BoxScreenContainer {...props}>{children}</BoxScreenContainer>
 }
 
+Box.Touchable = ({ children, ...props }) => {
+  return <BoxTouchableContainer {...props}>{children}</BoxTouchableContainer>
+}
+
 Box.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.string,
@@ -24,6 +32,7 @@ Box.propTypes = {
     PropTypes.node,
     PropTypes.func,
   ]),
+  onPress: PropTypes.func,
   ...flexPropsTypes,
   ...sizePropsTypes,
   ...colorPropsTypes,

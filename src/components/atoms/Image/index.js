@@ -11,7 +11,7 @@ export const Image = ({ ...props }) => {
   return <ImageContainer {...props} />
 }
 
-Image.PropTypes = {
+Image.propTypes = {
   source: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.string,
