@@ -18,7 +18,7 @@ export const Button = ({ children, ...props }) => (
     br={16}
     bg="primary"
     {...props}>
-    <Text fontSize={16} fontFamily="bold">
+    <Text fontSize={16} font="bold">
       {children}
     </Text>
   </ButtonContainer>

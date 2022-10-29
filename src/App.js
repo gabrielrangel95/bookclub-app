@@ -1,13 +1,12 @@
 import { ThemeProvider } from 'styled-components'
 import { NavigationContainer } from '@react-navigation/native'
 import { theme } from '~/styles'
-import { LoginScreen } from '~/modules/unauthenticated/screens'
-
+import { UnAuthRoutes } from '~/modules/unauthenticated/routes'
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-        <LoginScreen />
+        <UnAuthRoutes />
       </NavigationContainer>
     </ThemeProvider>
   )

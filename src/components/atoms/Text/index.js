@@ -10,7 +10,7 @@ import {
 
 export const Text = ({ children, ...props }) => {
   return (
-    <TextDefault color="black" fontSize={16} {...props}>
+    <TextDefault font="regular" color="black" fontSize={16} {...props}>
       {children}
     </TextDefault>
   )
@@ -46,7 +46,7 @@ Text.ActionText = ({ children, ...props }) => (
   </TextDefault>
 )
 
-Text.ActionText = ({ children, ...props }) => (
+Text.TinyText = ({ children, ...props }) => (
   <TextDefault color="black" {...props} fontSize={14} fontFamily="medium">
     {children}
   </TextDefault>
