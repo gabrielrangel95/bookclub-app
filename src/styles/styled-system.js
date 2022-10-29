@@ -81,7 +81,7 @@ export const sizeProps = ({
   ${maxH ? `max-height: ${px(maxH)}px;` : ''}
   ${minH ? `min-height: ${px(minH)}px;` : ''}
   ${w ? `width: ${typeof w === 'number' ? `${px(w)}px` : w};` : ''}
-  ${fullWidth ? `width: ${px(375)}px` : ''}
+  ${fullWidth ? `width: ${px(390)}px` : ''}
   ${baseWidth ? `width: ${px(335)}px` : ''}
   ${maxW ? `max-width: ${px(maxW)}px;` : ''}
   ${minW ? `min-width: ${px(minW)}px;` : ''}
@@ -196,6 +196,13 @@ export const fontProps = ({ underline, align, letterSpacing, ...props }) => `
   ${align ? `text-align: ${align};` : ''}
   ${letterSpacing ? `letter-spacing: ${px(letterSpacing, true) * 0.03}px;` : ''}
 `
+export const fontPropsTypes = {
+  underline: PropTypes.bool,
+  br: PropTypes.number,
+  topLeftRadius: PropTypes.number,
+  align: PropTypes.string,
+  letterSpacing: PropTypes.number,
+}
 
 export const borderProps = ({
   bw,
