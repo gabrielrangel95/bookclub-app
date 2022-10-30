@@ -15,6 +15,7 @@ export const Input = ({
   error,
   keyboardType,
   autoCapitalize,
+  autoCorrect,
   ...props
 }) => {
   const [isFocus, setIsFocus] = useState(false)
@@ -44,6 +45,7 @@ export const Input = ({
           onEndEditing={() => setIsFocus(false)}
           keyboardType={keyboardType}
           autoCapitalize={autoCapitalize}
+          autoCorrect={autoCorrect || true}
         />
         {secureTextEntry && (
           <Box.Touchable
@@ -71,6 +73,7 @@ Input.propTypes = {
   error: PropTypes.string,
   keyboardType: PropTypes.string,
   autoCapitalize: PropTypes.string,
+  autoCorrect: PropTypes.bool,
   ...paddingPropsTypes,
   ...marginPropsTypes,
 }

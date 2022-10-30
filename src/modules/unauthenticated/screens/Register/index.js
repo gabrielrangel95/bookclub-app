@@ -1,8 +1,28 @@
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { Box, Input, Button } from '~/components'
+import { useMutation } from '@tanstack/react-query'
+import { REGISTER } from '~/services/api/requests'
+import { showMessage } from 'react-native-flash-message'
 
-export const RegisterScreen = () => {
+export const RegisterScreen = ({ navigation }) => {
+  const mutation = useMutation(data => REGISTER(data), {
+    onSuccess: ({ data }) => {
+      showMessage({
+        message: 'Cadasstro realizado com sucesso!',
+        type: 'success',
+      })
+      navigation.goBack()
+    },
+    onError: ({ response }) => {
+      const errorMessage = response?.data?.error || 'Falha ao realizar o login.'
+      showMessage({
+        message: errorMessage,
+        type: 'danger',
+      })
+    },
+  })
+
   const validationSchema = Yup.object().shape({
     name: Yup.string()
       .required('Nome é obrigatório')
@@ -15,7 +35,8 @@ export const RegisterScreen = () => {
       .min(6, 'Senha deve conter ao menos 6 caracteres'),
     confirmPassword: Yup.string()
       .required('Confirmar senha é obrigatório.')
-      .min(6, 'Confirmar senha deve conter ao menos 6 caracteres'),
+      .min(6, 'Confirmar senha deve conter ao menos 6 caracteres')
+      .oneOf([Yup.ref('password')], 'Senhas não conferem.'),
   })
 
   const { values, setFieldValue, errors, handleSubmit } = useFormik({
@@ -29,7 +50,7 @@ export const RegisterScreen = () => {
     validateOnChange: false,
     validateOnBlur: false,
     onSubmit: async finalValues => {
-      console.log({ finalValues })
+      mutation.mutate(finalValues)
     },
   })
 
@@ -40,6 +61,7 @@ export const RegisterScreen = () => {
         onChangeText={t => setFieldValue('name', t)}
         error={errors.name}
         placeholder="Seu nome"
+        autoCorrect={false}
         mt={48}
         mb={24}
       />

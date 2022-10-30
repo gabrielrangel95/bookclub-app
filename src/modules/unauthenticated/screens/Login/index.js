@@ -2,8 +2,29 @@ import { Box, Button, Image, Input, Text } from '~/components/atoms'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import logoSrc from '~/assets/img/logo_full.png'
+import { useMutation } from '@tanstack/react-query'
+import { LOGIN } from '~/services/api/requests'
+import { showMessage } from 'react-native-flash-message'
 
 export const LoginScreen = ({ navigation }) => {
+  const mutation = useMutation(data => LOGIN(data), {
+    onSuccess: ({ data }) => {
+      // TODO: navigate to auth module
+      console.log({ data })
+      showMessage({
+        message: 'Autenticado com sucesso!',
+        type: 'success',
+      })
+    },
+    onError: ({ response }) => {
+      const errorMessage = response?.data?.error || 'Falha ao realizar o login.'
+      showMessage({
+        message: errorMessage,
+        type: 'danger',
+      })
+    },
+  })
+
   const validationSchema = Yup.object().shape({
     email: Yup.string()
       .email('E-mail inválido.')
@@ -19,8 +40,8 @@ export const LoginScreen = ({ navigation }) => {
     validationSchema: validationSchema,
     validateOnChange: false,
     validateOnBlur: false,
-    onSubmit: async ({ email, password }) => {
-      console.log({ email, password })
+    onSubmit: ({ email, password }) => {
+      mutation.mutate({ email, password })
     },
   })
 
@@ -59,6 +80,7 @@ export const LoginScreen = ({ navigation }) => {
         secureTextEntry
         mb={16}
         error={errors.password}
+        autoCorrect={false}
       />
       <Box mb={36} w={352} align="flex-end">
         <Box.Touchable>
