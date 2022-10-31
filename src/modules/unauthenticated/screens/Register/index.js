@@ -9,7 +9,7 @@ export const RegisterScreen = ({ navigation }) => {
   const mutation = useMutation(data => REGISTER(data), {
     onSuccess: ({ data }) => {
       showMessage({
-        message: 'Cadasstro realizado com sucesso!',
+        message: 'Cadastro realizado com sucesso!',
         type: 'success',
       })
       navigation.goBack()

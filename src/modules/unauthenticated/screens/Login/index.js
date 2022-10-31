@@ -92,7 +92,7 @@ export const LoginScreen = ({ navigation }) => {
         autoCorrect={false}
       />
       <Box mb={36} w={352} align="flex-end">
-        <Box.Touchable>
+        <Box.Touchable onPress={() => navigation.navigate('ForgotPassword')}>
           <Text.TinyText color="grey">Esqueceu a senha?</Text.TinyText>
         </Box.Touchable>
       </Box>

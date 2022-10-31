@@ -1,5 +1,10 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { LoginScreen, RegisterScreen } from '../screens'
+import {
+  LoginScreen,
+  RegisterScreen,
+  ForgotPasswordScreen,
+  ResetPasswordScreen,
+} from '../screens'
 import { theme } from '~/styles/theme'
 import { Box } from '~/components'
 import Icon from 'react-native-vector-icons/Entypo'
@@ -38,6 +43,20 @@ export const UnAuthRoutes = () => {
         }}
         name="Register"
         component={RegisterScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Esqueceu Senha',
+        }}
+        name="ForgotPassword"
+        component={ForgotPasswordScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Nova Senha',
+        }}
+        name="ResetPassword"
+        component={ResetPasswordScreen}
       />
     </Stack.Navigator>
   )
