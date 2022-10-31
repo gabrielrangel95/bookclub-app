@@ -5,12 +5,21 @@ import logoSrc from '~/assets/img/logo_full.png'
 import { useMutation } from '@tanstack/react-query'
 import { LOGIN } from '~/services/api/requests'
 import { showMessage } from 'react-native-flash-message'
+import { useGlobal } from '~/services/context'
 
 export const LoginScreen = ({ navigation }) => {
+  const { dispatch } = useGlobal()
+
   const mutation = useMutation(data => LOGIN(data), {
     onSuccess: ({ data }) => {
-      // TODO: navigate to auth module
-      console.log({ data })
+      dispatch({
+        type: 'setState',
+        data: {
+          user: data?.user,
+          token: data?.token,
+          router: 'authenticated',
+        },
+      })
       showMessage({
         message: 'Autenticado com sucesso!',
         type: 'success',
