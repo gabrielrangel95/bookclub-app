@@ -5,7 +5,7 @@ const GlobalContext = createContext()
 const initialState = {
   user: null,
   token: '',
-  router: 'unAuth',
+  router: 'authenticated',
 }
 
 // action -> type - data

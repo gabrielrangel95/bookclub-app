@@ -1,9 +1,9 @@
 import { Box, Text } from '~/components'
 
-export const HomeScreen = () => {
+export const SearchScreen = () => {
   return (
     <Box flex={1} align="center" justify="center">
-      <Text>Home</Text>
+      <Text>Search</Text>
     </Box>
   )
 }

@@ -6,8 +6,7 @@ import {
   ResetPasswordScreen,
 } from '../screens'
 import { theme } from '~/styles/theme'
-import { Box } from '~/components'
-import Icon from 'react-native-vector-icons/Entypo'
+import { Icon } from '~/components'
 
 const Stack = createNativeStackNavigator()
 
@@ -21,13 +20,12 @@ export const UnAuthRoutes = () => {
         },
         headerBackTitleVisible: false,
         headerLeft: () => (
-          <Box.Touchable onPress={() => navigation.goBack()}>
-            <Icon
-              name="chevron-thin-left"
-              size={theme.px(24)}
-              color={theme.primary}
-            />
-          </Box.Touchable>
+          <Icon.Touchable
+            onPress={() => navigation.goBack()}
+            name="chevron-left"
+            size={28}
+            color="primary"
+          />
         ),
       })}>
       <Stack.Screen
