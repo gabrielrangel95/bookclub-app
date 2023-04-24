@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
-import IconLib from 'react-native-vector-icons/MaterialCommunityIcons'
+import IconLib from 'react-native-vector-icons/Ionicons'
 import { Box } from '~/components/atoms'
 import { theme } from '~/styles/theme'
 import { paddingPropsTypes, marginPropsTypes } from '~/styles/styled-system'
 
-export const Icon = ({ name, size, color, ...props }) => {
+export const Icon = ({ name, size, color, fontFamily, ...props }) => {
   return (
     <Box {...props}>
       <IconLib

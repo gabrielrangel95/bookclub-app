@@ -8,14 +8,16 @@ export const BottomBar = ({ state, descriptors, navigation }) => {
   }
 
   const routeIcon = {
-    Home: 'book-open-page-variant-outline',
-    Search: 'search-web',
+    Home: 'book-outline',
+    Search: 'search',
     Favorites: 'bookmark-outline',
-    Profile: 'account-circle-outline',
+    Profile: 'person-circle-outline',
   }
 
   return (
     <Box
+      btw={1}
+      borderColor="lightGrey"
       w="100%"
       h={84}
       ph={24}
@@ -41,29 +43,19 @@ export const BottomBar = ({ state, descriptors, navigation }) => {
           }
         }
 
-        const onLongPress = () => {
-          navigation.emit({
-            type: 'tabLongPress',
-            target: route.key,
-          })
-        }
-
         return (
           <Box.Touchable
-            // accessibilityRole="button"
-            // accessibilityState={isFocused ? { selected: true } : {}}
-            // accessibilityLabel={options.tabBarAccessibilityLabel}
-            // testID={options.tabBarTestID}
             onPress={onPress}
-            // onLongPress={onLongPress}
             flex={1}
             align="center"
             justify="center">
             <Icon
               name={icon}
               size={24}
-              color={isFocused ? 'primary' : 'grey'}
+              color={isFocused ? 'black' : 'lightGrey'}
             />
+
+            {isFocused && <Box mt={4} height={3} w={24} bg="primary" />}
           </Box.Touchable>
         )
       })}
