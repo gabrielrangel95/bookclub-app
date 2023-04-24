@@ -6,12 +6,18 @@ import { useMutation } from '@tanstack/react-query'
 import { LOGIN } from '~/services/api/requests'
 import { showMessage } from 'react-native-flash-message'
 import { useGlobal } from '~/services/context'
+import { storeData } from '~/services/storage'
+import { USER_STORAGE_KEY } from '~/services/storage/constants'
 
 export const LoginScreen = ({ navigation }) => {
   const { dispatch } = useGlobal()
 
   const mutation = useMutation(data => LOGIN(data), {
     onSuccess: ({ data }) => {
+      storeData(USER_STORAGE_KEY, {
+        user: data?.user,
+        token: data?.token,
+      })
       dispatch({
         type: 'setState',
         data: {

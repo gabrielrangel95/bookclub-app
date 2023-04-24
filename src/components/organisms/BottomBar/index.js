@@ -45,6 +45,7 @@ export const BottomBar = ({ state, descriptors, navigation }) => {
 
         return (
           <Box.Touchable
+            key={`bottom_bar_${index}`}
             onPress={onPress}
             flex={1}
             align="center"

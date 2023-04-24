@@ -4,11 +4,26 @@ import {
   RegisterScreen,
   ForgotPasswordScreen,
   ResetPasswordScreen,
+  SplashScreen,
 } from '../screens'
 import { theme } from '~/styles/theme'
 import { Icon } from '~/components'
 
 const Stack = createNativeStackNavigator()
+
+export const SplashRoute = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        options={{
+          header: () => null,
+        }}
+        name="SplashScreen"
+        component={SplashScreen}
+      />
+    </Stack.Navigator>
+  )
+}
 
 export const UnAuthRoutes = () => {
   return (
