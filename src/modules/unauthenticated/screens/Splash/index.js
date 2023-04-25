@@ -13,7 +13,7 @@ export const SplashScreen = () => {
 
     if (data) {
       api.interceptors.request.use(config => {
-        config.headers.authentication = `bearer ${data?.token}`
+        config.headers.Authorization = `bearer ${data?.token}`
         return config
       })
 

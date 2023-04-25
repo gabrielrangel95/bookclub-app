@@ -4,7 +4,7 @@ const { width, height } = Dimensions
 
 const figmaWidth = 390
 
-const px = valuePx => {
+export const px = valuePx => {
   const widthPercent = (valuePx / figmaWidth) * 100
   const screenWidth = Dimensions.get('window').width
   return PixelRatio.roundToNearestPixel(
